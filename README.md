@@ -23,7 +23,7 @@ in 3 days / 3日後
 in 1 week / 1週間後
 
 # How to run/実行方法
-1. Copy the following text to `keys.json` and replace `XXX` to your correct keys (Make a file `keys.json` in this directory).  
+Copy the following text to `keys.json` and replace `XXX` to your correct keys (Make a file `keys.json` in this directory).  
 下のテキストを`keys.json`にコピーして、`XXX`を正しいキーに書き換えてください(このディレクトリに`keys.json`というファイルを作ってください)。 
 ```json
 	{  
@@ -34,5 +34,5 @@ in 1 week / 1週間後
 	}
 ```
 
-2. Install the modules required and run app.js.  
+Install the modules required and run app.js.  
 必要なモジュールをインストールしてapp.jsを実行してください。

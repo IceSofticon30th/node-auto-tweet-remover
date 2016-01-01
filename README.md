@@ -3,8 +3,8 @@ A Node.js app that removes your expired tweets.
 期限切れのツイートを削除するNode.jsアプリ。
 
 # Usage/使い方
-You can remove tweets automatically using hash tags.  
-ハッシュタグを使ってツイートを自動的に削除できます。
+By including an expiration hashtag in your tweet, the tweet will be removed automatically.
+ハッシュタグで期限を指定することで、そのツイートが自動的に削除されるようになります。
 
 You can use the number 0-99 and one of time units `m`(minute) `h`(hour) `d`(day) `w`(week) as the expiration of the tweet.  
 0〜99の数字と時間の単位`m`(分) `h`(時間) `d`(日) `w`(週)がツイートの有効期限として使えます。

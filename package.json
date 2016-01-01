@@ -1,0 +1,26 @@
+{
+  "name": "node-auto-tweet-remover",
+  "version": "1.0.0",
+  "description": "A node.js application that removes your expired tweet.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IceSofticon30th/node-auto-tweet-remover.git"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IceSofticon30th/node-auto-tweet-remover/issues"
+  },
+  "homepage": "https://github.com/IceSofticon30th/node-auto-tweet-remover#readme",
+  "dependencies": {
+    "node-schedule": "^0.6.0",
+    "twitter": "^1.2.5"
+  }
+}

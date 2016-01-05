@@ -30,7 +30,7 @@ function scheduleRemovingTweets() {
 }
 
 function fetchTweets(since_id, callback) {
-	var option = { count: 35 };
+	var option = { count: 200 };
     if (since_id)
     	option.since_id = since_id;
 
@@ -119,9 +119,16 @@ function scheduleRemovingTweet(tweet) {
 	function removeTweet() {
 		client.post('statuses/destroy/' + tweet.id_str, function (err, tweet) {
 			if (err) console.error(err);
-			console.log('[' + new Date().toLocaleTimeString() + '] removed: ' + tweet.text + '(' + new Date(tweet.created_at).toLocaleTimeString() + ')');
+			console.log('[{{now}}] removed: {{text}} ({{created}})'
+                .replace('{{now}}', new Date().toLocaleString())
+                .replace('{{text}}', tweet.text)
+                .replace('{{created}}', new Date(tweet.created_at).toLocaleString()) );
 		});
 	}
 
 	schedule.scheduleJob(expiration, removeTweet);
+    console.log('[{{now}}] scheduled to be removed at {{expiration}}: {{text}}'
+        .replace('{{now}}', new Date().toLocaleString())
+        .replace('{{expiration}}', expiration.toLocaleString())
+        .replace('{{text}}', tweet.text));
 }
